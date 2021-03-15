@@ -1,0 +1,25 @@
+{
+	"name": "mireiawen/dnsmasq-configure",
+	"description": "Build dnsmasq configuration file from templates",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Mireiawen Rose",
+			"email": "mir@mireiawen.net"
+		}
+	],
+	"require": {
+		"php": ">=8.0.0",
+		"ext-gettext": "*",
+		"mireiawen/configuration": "^0.3.1",
+		"smarty/smarty": "^3.1"
+	},
+	"require-dev": {
+		"roave/security-advisories": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"Mireiawen\\dnsconfig\\": "includes"
+		}
+	}
+}

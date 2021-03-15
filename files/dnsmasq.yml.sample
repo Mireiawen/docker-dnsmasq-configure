@@ -1,0 +1,23 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+domains:
+- name: "example.tld"
+  net: "192.168.0.0/24"
+  comment: "Example Network"
+  hosts:
+  - name: "mikrotik"
+    ip: "192.168.0.1"
+    aliases:
+    - "gateway"
+    - "gw"
+  - name: "testbench"
+    ip: "192.168.0.10"
+    comment: "Testbench server"
+    addresses:
+    - "" # Create a wildcard address
+  dynamic:
+    start: "192.168.0.150"
+    end: "192.168.0.199"
+    template: "dyn-{$c}-{$d}"
+    comment: "Example dynamic range"

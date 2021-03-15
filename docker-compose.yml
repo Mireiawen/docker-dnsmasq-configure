@@ -1,0 +1,15 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+version: '3.7'
+
+services:
+  dnsmasq:
+    build:
+      context: '.'
+    image: 'mireiawen/dnsmasq-config:latest'
+    volumes:
+    - './files:/app/files:ro'
+    - '/app/templates_c'
+    labels:
+    - 'traefik.enable=false'

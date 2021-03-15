@@ -1,0 +1,6 @@
+*.swp
+vendor
+.idea
+.gitignore
+.git
+docker-compose.yml
