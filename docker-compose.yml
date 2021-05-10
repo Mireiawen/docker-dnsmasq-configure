@@ -9,7 +9,11 @@ services:
       context: '.'
     image: 'mireiawen/dnsmasq-config:latest'
     volumes:
-    - './files:/app/files:ro'
-    - '/app/templates_c'
+    - type: 'bind'
+      source: './files'
+      target: '/app/files'
+      read_only: true
+    - type: 'tmpfs'
+      target: '/app/templates_c'
     labels:
     - 'traefik.enable=false'
