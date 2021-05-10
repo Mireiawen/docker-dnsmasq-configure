@@ -1,6 +1,7 @@
+.git
+.gitignore
+.env
 *.swp
+docker-compose.yml
 vendor
 .idea
-.gitignore
-.git
-docker-compose.yml
