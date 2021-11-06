@@ -26,6 +26,6 @@ server=1.1.1.1
 server=1.0.0.1
 
 # quad9
-server=9.9.9.9
+#server=9.9.9.9
 #server=149.112.112.112
 
