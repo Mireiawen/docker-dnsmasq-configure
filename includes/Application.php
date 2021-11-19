@@ -223,6 +223,13 @@ class Application
 			$this->ConfigurationError(\sprintf(\_('The key %s is not of expected format of %s'), 'addresses', 'array'));
 		}
 		
+		// Check for the extra FQDNs
+		$fqdns = $host['fqdns'] ?? [];
+		if (!\is_array($fqdns))
+		{
+			$this->ConfigurationError(\sprintf(\_('The key %s is not of expected format of %s'), 'fqdns', 'array'));
+		}
+		
 		// Get the reverse IP
 		$reverse = $this->IPtoReverse($ip);
 		
@@ -238,6 +245,10 @@ class Application
 		foreach ($addresses as $address)
 		{
 			$addressdomains[] = \sprintf('%s.%s', $address, $domain);
+		}
+		foreach ($fqdns as $address)
+		{
+			$addressdomains[] = $address;
 		}
 		
 		$template = $this->Smarty->createTemplate('files/host.tpl');
