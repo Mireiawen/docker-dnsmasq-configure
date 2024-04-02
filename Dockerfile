@@ -1,5 +1,5 @@
 # Source images
-FROM "bitnami/minideb:buster" as minideb
+FROM "bitnami/minideb:bookworm" as minideb
 FROM "composer:latest" as composer
 
 # Build the composer application

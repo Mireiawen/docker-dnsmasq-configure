@@ -12,7 +12,7 @@
 		"php": ">=8.0.0",
 		"ext-gettext": "*",
 		"mireiawen/configuration": "^0.3.1",
-		"smarty/smarty": "^3.1"
+		"smarty/smarty": "^4.3"
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-master"
